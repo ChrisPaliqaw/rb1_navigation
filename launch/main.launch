@@ -1,0 +1,6 @@
+<launch>
+  <include file="$(find rb1_mapping)/launch/provide_map.launch"/>
+  <include file="$(find rb1_localization)/launch/amcl.launch"/>
+  <include file="$(find rb1_navigation)/launch/navigation.launch"/>
+  <include file="$(find rb1_navigation)/launch/main_navigation.launch"/>
+</launch>
