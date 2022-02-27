@@ -1,0 +1,5 @@
+<launch>
+  <node pkg="rb1_navigation" type="main_navigation.py" name="go_to_point"  output="screen">
+    <rosparam file="$(find rb1_localization)/goal/poi.yaml"/>
+  </node>
+</launch>

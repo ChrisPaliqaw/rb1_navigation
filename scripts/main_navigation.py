@@ -15,12 +15,22 @@ class GoToPoint():
         rospy.on_shutdown(self.__shutdownhook)
     
     def __service_callback(self, request: POIRequest):
-        return POIResponse()
+        response = POIResponse()
+        rosparam_path = f"{GoToPoint.SERVICE_NAME}/{request.label}"
+        if rospy.has_param(rosparam_path):
+           poi = rospy.get_param(rosparam_path)
+           rospy.loginfo(f"Located rosparam {rosparam_path}")
+           rospy.loginfo(f"POI value is:\n {poi}")
+           response.success = True
+        else:
+            rospy.logerr(f"Couldn't locate rosparam {rosparam_path}")
+            response.success = False
+        return response
         
     def __shutdownhook(self):
         self.ctrl_c = True
             
 if __name__ == '__main__':
-    rospy.init_node(GoToPoint.SERVICE_NAME, anonymous=True)
+    rospy.init_node(GoToPoint.SERVICE_NAME)
     GoToPoint()
     rospy.spin()
