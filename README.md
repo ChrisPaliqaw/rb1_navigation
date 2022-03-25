@@ -42,5 +42,6 @@ Use the 2D Nav Goal button to send RB-1 somewhere close by.
 
 In `call go_to_point`, run
 `rosservice call /go_to_point "label: 'initial_position'"`
+
 After the action completes, call
 `rosservice call /go_to_point "label: 'loading_position'"`
