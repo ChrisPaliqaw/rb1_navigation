@@ -27,13 +27,13 @@ In **rviz**, start **rviz**. Load the configuration
 `rb1_navigation/rviz_config/navigation.rviz`
 
 Zoom out in rviz until you see
-![[initial_costmap.png]]
+![Initial costmap](initial_costmap.png)
 
 But rotate until it aligns with gazebo
-![[aligned_costmap.png]]
+![Aligned costmap](aligned_costmap.png)
 
 Use the 2D Pose estimate tool to align the local and global costmaps
-![[roughly_aligned_costmaps.png]]
+![Roughly aligned costmaps](roughly_aligned_costmaps.png)
 
 Use the 2D Nav Goal button to send RB-1 somewhere close by.
 
