@@ -18,7 +18,7 @@ source ~/simulation_ws/devel/setup.bash
 roslaunch rb1_base_gazebo warehouse_rb1.launch
 ```
 Get the top-down view, so you see
-![[warehouse_topdown.png]]
+![[https://github.com/christophomos/rb1_navigation/blob/main/warehouse_topdown.png]]
 
 In **main**: `roslaunch rb1_navigation main.launch
 
