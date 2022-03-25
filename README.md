@@ -21,9 +21,12 @@ Get the top-down view, so you see
 
 ![Top-down warehouse view](warehouse_topdown.png)
 
-In **main**: `roslaunch rb1_navigation main.launch
+In **main**:
+
+`roslaunch rb1_navigation main.launch`
 
 In **rviz**, start **rviz**. Load the configuration
+
 `rb1_navigation/rviz_config/navigation.rviz`
 
 Zoom out in rviz until you see
@@ -41,7 +44,9 @@ Use the 2D Pose estimate tool to align the local and global costmaps
 Use the 2D Nav Goal button to send RB-1 somewhere close by.
 
 In `call go_to_point`, run
+
 `rosservice call /go_to_point "label: 'initial_position'"`
 
-After the action completes, call
+After that action completes, run
+
 `rosservice call /go_to_point "label: 'loading_position'"`
